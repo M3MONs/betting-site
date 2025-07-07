@@ -125,7 +125,7 @@ def import_upcoming_matches_odds(self):
         three_days_later = now + timedelta(days=3)
 
         # Get matches that are scheduled to start within 3 days, have source_url and don't have odds yet
-        upcoming_matches = Match.objects.filter(start_time__gte=now, start_time__lte=three_days_later, source_url__isnull=False, status__in=["prepared", "scheduled"], is_active=True)
+        upcoming_matches = Match.objects.filter(start_time__lte=three_days_later, source_url__isnull=False, status__in=["prepared", "scheduled"], is_active=True)
 
         if not upcoming_matches.exists():
             logger.info("No upcoming matches found for odds import")
