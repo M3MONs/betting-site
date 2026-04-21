@@ -37,10 +37,8 @@ soupsieve==2.7
 sqlparse==0.5.4
 trio==0.30.0
 trio-websocket==0.12.2
-typing_extensions==4.14.0
 tzdata==2025.2
 uritemplate==4.2.0
-urllib3==2.6.3
 vine==5.1.0
 wcwidth==0.2.13
 webdriver-manager==4.0.2
